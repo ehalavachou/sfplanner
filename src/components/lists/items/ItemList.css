@@ -1,0 +1,8 @@
+.ItemListPanel {
+    display: flex;
+    justify-content: center;
+}
+
+.AddItemButton {
+    padding-left: 50px;
+}

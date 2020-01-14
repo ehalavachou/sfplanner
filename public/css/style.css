@@ -1,0 +1,119 @@
+@media (min-width: 1200px) {
+	.container{
+		max-width: 100%;
+	}
+}
+
+canvas {
+	position: absolute;
+}
+
+#bg-frame {
+	z-index: 1;
+}
+
+#main-frame{
+	z-index: 2;
+}
+
+#animate-frame{
+	z-index: 3;
+}
+
+.main-column {
+	height: 100%;
+	background-color: #fff;
+}
+
+.canvas-container {
+	margin-top: 20px;
+}
+
+.control-panel {
+	margin-top: 50px;
+	height: 100px;
+	border: 1px solid #5a6268;
+	padding: 15px;
+	box-shadow: 0 0 5px #5a6268;
+	background-color: #d6d8d9;
+}
+
+.base-frame-border, .component {
+	border: 1px black solid;
+	border-radius: 5px;
+}
+
+.remove-mode-on {
+	border: 2px solid red;
+}
+
+.info-panel {
+	margin-top: 50px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border: 1px solid #5a6268;
+	padding: 5px;
+	box-shadow: 0 0 5px #5a6268;
+}
+
+.info-panel-row, .info-panel-row.added-objects {
+	margin-top: 10px;
+	border: 1px solid #1c7430;
+	padding: 3px;
+	border-radius: 2px;
+	background-color: #8fd19e;
+}
+
+.info-panel-row.added-objects {
+	background-color: #d6d8d9;
+}
+
+.component-panel {
+    margin-top: 50px;
+}
+
+.object {
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 2px #6c757d;
+    padding: 6px;
+}
+
+.add-component {
+    float: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.text-red {
+	color: red;
+}
+
+.component {
+	margin-bottom: 5px;
+}
+
+.component.miner {
+	background-color: #f8d7da;
+}
+
+.component.smelter {
+	background-color: lightgreen;
+}
+
+.component.constructor {
+	background-color: lightblue;
+}
+
+.component.assembler {
+	background-color: mediumpurple;
+}
+
+.component.manufacturer {
+	background-color: lightsalmon;
+}
+
+

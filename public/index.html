@@ -1,43 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html>
+<head>
+  <title>Satisfactory Planner</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static1.squarespace.com/static/59e891bfa9db098f5ced6591/t/5b1ec827aa4a99ab355f72d1/favicon.ico">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col main-column">
+      <div id="statuses" class="hidden" data-mode-move="off" data-mode-remove="off" data-mode-add="off"></div>
+      <div id="settings" class="hidden" data-scale="1" data-grid-size="32"></div>
+      <div class="row">
+        <div class="col-2">
+          <div class="row component-panel">
+            <div class="col">
+              <div class="object">
+                <img src="static/128px-Miner_MK1.png" alt="">
+                <button data-component-type="miner" type="button" class="btn btn-success add-component">Add</button>
+              </div>
+              <div class="object">
+                <img src="static/128px-Smelter.png" alt="">
+                <button data-component-type="smelter" type="button" class="btn btn-success add-component">Add</button>
+              </div>
+              <div class="object">
+                <img src="static/128px-Constructor.png" alt="">
+                <button data-component-type="constructor" type="button" class="btn btn-success add-component">Add</button>
+              </div>
+              <div class="object">
+                <img src="static/128px-Assembler.png" alt="">
+                <button data-component-type="assembler" type="button" class="btn btn-success add-component">Add</button>
+              </div>
+              <div class="object">
+                <img src="static/128px-Manufacturer.png" alt="">
+                <button data-component-type="manufacturer" type="button" class="btn btn-success add-component">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="row control-panel">
+            <div class="col-4">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary" id="remove-mode">Remove mode</button>
+                <button type="button" class="btn btn-danger remove-mode-indicator">OFF</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <h3 id="place-component" class="hidden">Place component!</h3>
+            </div><div class="col-4">
+            <h4 id="area-restricted" class="hidden text-red">Area restricted!</h4>
+          </div>
+          </div>
+          <div class="row canvas-container">
+            <canvas id="bg-frame"></canvas>
+            <canvas id="main-frame"></canvas>
+            <!--<canvas id="animate-frame"></canvas>-->
+          </div>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        </div>
+        <div class="col-2">
+          <div class="row info-panel">
+            <div class="col">
+              <h4>Info Panel</h4>
+              <div class="row info-panel-row">
+                <div class="col">
+                  Selected object:
+                  <div class="object-selected">
+                  </div>
+                </div>
+              </div>
+              <div class="row info-panel-row added-objects">
+                <div class="col">
+                  Added components:
+                  <div class="row">
+                    <div class="col objects-added">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+</div>
+<div id="root"></div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/image_usage.js"></script>
+<script type="text/javascript" src="js/canvas_base.js"></script>
+<script type="text/javascript" src="js/event_module.js"></script>
+<script type="text/javascript" src="js/draw_objects.js"></script>
+<script type="text/javascript" src="js/factory_objects.js"></script>
+<script type="text/javascript" src="js/template_manager.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
 </html>
